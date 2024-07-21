@@ -1,0 +1,12 @@
+{% extends "header.html"%} 
+{% block content %}
+{% for post in posts %}
+    <div>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
+        <h5>{{ post.date|date:"Y-m-d" }} <a href="/blog/{{ post.id }}">Read more</a></h5>
+    </div>
+{% endfor %} 
+
+{%endblock%}
+
